@@ -10,5 +10,5 @@
 - `docker push happy/flask-uwsgi:python3.7`
 
 #### Required config file inside container
-- /app/uwsgi.ini
-- /app/supervisord.conf
+- `/app/uwsgi.ini`
+- `/app/supervisord.conf`
