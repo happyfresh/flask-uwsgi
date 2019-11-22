@@ -1,6 +1,6 @@
 FROM python:3.7
 
-RUN pip install flask uwsgi supervisor boto3 pandas gensim awscli flask-cors
+RUN pip install flask uwsgi supervisor boto3 pandas gensim awscli flask-cors redis flask-caching
 
 RUN set -x \
     && apt-get update \
