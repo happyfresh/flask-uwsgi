@@ -20,11 +20,9 @@ RUN set -x \
     && if [ -n "$tempDir" ]; then \
         apt-get purge -y --auto-remove \
         && rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; \
-    fi
-
-RUN curl https://s3.dualstack.ap-southeast-1.amazonaws.com/aws-xray-assets.ap-southeast-1/xray-daemon/aws-xray-daemon-3.x.deb -o xray-daemon.deb
-
-RUN apt install ./xray-daemon.deb
+    fi \
+    && curl https://s3.dualstack.ap-southeast-1.amazonaws.com/aws-xray-assets.ap-southeast-1/xray-daemon/aws-xray-daemon-3.x.deb -o xray-daemon.deb \
+    && apt install ./xray-daemon.deb
 
 EXPOSE 80 443
 
