@@ -9,6 +9,8 @@ RUN pip install --no-cache-dir \
     flask-cors \
     gensim \
     pandas \
+    pymongo \
+    dnspython \
     redis \
     supervisor \
     uwsgi
